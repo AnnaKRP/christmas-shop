@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* HEADER / MENU STYLING */
 header {
     background-color: #FFFFFF; 
@@ -152,19 +156,108 @@ main {
 /* ABOUT SECTION */
 #about {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    padding: 60px 8px;
+    padding: 80px 8px 10px 8px;
     height: 648px;
 }
 
 #aboutContainer {
+    background: #FFFFFF;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
     padding: 0px;
     height: 528px;
-    background: #FFFFFF;
+    width: 80%;
     border-radius: 20px;
+}
+
+#aboutContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 60px;
+    width: 30%;    
+}
+
+#aboutContainer div>p:first-child {
+    color: #FF4646;
+    font-family: 'Allura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+}
+
+#aboutContainer div > p:nth-child(2) {
+    color: #181C29;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 152%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+#aboutContainer div > p:last-child {
+    color: #181C29;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+}
+
+#aboutImg {
+    background: url(./assets/santa.png) no-repeat center center; 
+    background-size: cover;
+    border-radius: 20px;
+    flex: 0 0 40%;
+    height: 100%;
+}
+
+/* SLIDER SECTION */
+#slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 8px;
+    height: 488px;
+}
+
+#sliderContainer {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    width: 80%;
+    height: 368px;
+}
+
+#sliderContainer div:first-child {
+    text-align: center;
+}
+
+#sliderContainer div:first-child > p {
+    font-family: 'Allura';
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    margin: 5px;
+}
+
+#sliderContainer div:first-child > h2 {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 5px;
 }
