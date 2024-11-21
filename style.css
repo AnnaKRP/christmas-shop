@@ -1,42 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Allura&family=Buda:wght@300&family=Fondamento:ital@0;1&family=Fugaz+One&family=Gideon+Roman&family=Lexend:wght@100..900&family=Pattaya&family=Quando&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Allura&family=Buda:wght@300&family=Fondamento:ital@0;1&family=Fugaz+One&family=Gideon+Roman&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pattaya&family=Quando&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     background-color: #FFFFFF;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* UTILITY CLASSES */
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-primary {
+    color: #FF4646;
+}
+
+.text-secondary {
+    color: #181C29;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-normal {
+    font-weight: 400;
+}
+
 /* HEADER / MENU STYLING */
 header {
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
     display: flex;
-    flex-direction: row; 
     justify-content: space-between;
     align-items: center;
     height: 64px;
     padding: 0px 8px;
-    
 }
 
-#logoContainer {
+#logo-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 8px 20px;
     gap: 8px;
+    padding: 8px 20px;
     height: 40px;
     border-radius: 12px;
     cursor: pointer;
-}
-
-#logoLink {
-    text-decoration: none;
-    color: inherit; 
-    display: block; 
 }
 
 #logo {
@@ -44,11 +64,8 @@ header {
     width: 24px;
 }
 
-#logoContainer p {
-    text-transform: uppercase;
-    color: #181C29;
+#logo-container p {
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 130%;
@@ -57,7 +74,6 @@ header {
 
 #menu {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     padding: 12px 20px;
@@ -66,13 +82,7 @@ header {
 
 #menu a {
     color: #181C29;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
     font-size: 16px;
-    line-height: 130%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     padding: 12px 20px;
     margin: 0px 5px;
     border-radius: 12px;
@@ -92,7 +102,7 @@ main {
 }
 
 /* HERO SECTION STYLING */
-#heroSection {
+#hero-section {
     background: url(./assets/bg-ball.png) no-repeat center top;
     background-size: cover;
     display: flex;
@@ -102,7 +112,7 @@ main {
     padding: 60px 8px;
 }
 
-#heroContainer {
+#hero-container {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -116,33 +126,26 @@ main {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#heroContainer p {
+#hero-container p {
     font-family: 'Allura';
-    font-style: normal;
-    font-weight: 400;
     font-size: 32px;
-    line-height: 100%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    margin: 3px;
 }
 
-#heroContainer h1, button {
+#hero-container h1,
+button {
     line-height: 150%;
     text-align: center;
     letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
-#heroContainer h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+#hero-container h1 {
     font-weight: 600;
     font-size: 30px;
     margin: 7px;
 }
 
-#heroContainer button {
+#hero-container button {
     padding: 20px 10px;
     width: 260px;
     height: 56px;
@@ -163,12 +166,11 @@ main {
     height: 648px;
 }
 
-#aboutContainer {
+#about-container {
     background: #FFFFFF;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin: 10px auto;
     padding: 0px;
     height: 528px;
@@ -176,47 +178,32 @@ main {
     border-radius: 20px;
 }
 
-#aboutContainer div{
+#about-container div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     padding: 0px 60px;
-    width: 30%;    
+    width: 30%;
 }
 
-#aboutContainer div>p:first-child {
+#about-container div p:first-child {
     color: #FF4646;
     font-family: 'Allura';
-    font-style: normal;
-    font-weight: 400;
     font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0.05em;
 }
 
-#aboutContainer div > p:nth-child(2) {
-    color: #181C29;
-    font-family: 'Montserrat';
-    font-style: normal;
+#about-container div p:nth-child(2) {
     font-weight: 600;
     font-size: 24px;
-    line-height: 152%;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
 }
 
-#aboutContainer div > p:last-child {
-    color: #181C29;
-    font-family: 'Montserrat';
-    font-style: normal;
+#about-container div p:last-child {
     font-weight: 400;
     font-size: 16px;
-    line-height: 148%;
 }
 
-#aboutImg {
-    background: url(./assets/santa.png) no-repeat center center; 
+#about-img {
+    background: url(./assets/santa.png) no-repeat center center;
     background-size: cover;
     border-radius: 20px;
     flex: 0 0 40%;
@@ -228,11 +215,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 8px;
-    height: 488px;
+    padding: 40px 8px;
+    width: 100%;
 }
 
-#sliderContainer {
+#slider-container {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -240,24 +227,55 @@ main {
     padding: 0px;
     gap: 20px;
     width: 80%;
-    height: 368px;
+    height: 500px;
 }
 
-#sliderContainer div:first-child {
-    text-align: center;
-}
-
-#sliderContainer div:first-child > p {
+#slider-title p {
     font-family: 'Allura';
-    font-size: 24px;
-    letter-spacing: 0.05em;
-    margin: 5px;
+    margin-bottom: 8px;
+    font-size: 28px;
 }
 
-#sliderContainer div:first-child > h2 {
-    font-family: 'Montserrat';
+#slider-title h2 {
     font-size: 32px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    margin: 5px;
+    margin: 10px;
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    height: 200px;
+    margin-top: 30px;
+    /* width: 100%; */
+}
+
+.slider-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.slider-text {
+    left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    font-size: 80px;
+    line-height: 98px;
+    padding: 18px;
+}
+
+.one {
+    background-image: url('./assets/snowman.png');
+}
+
+.two {
+    background-image: url('./assets/christmas-trees.png');
+}
+
+.three {
+    background-image: url('./assets/christmas-tree-ball.png');
 }

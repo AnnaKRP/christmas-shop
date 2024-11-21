@@ -1,61 +1,75 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <title>Christmas Shop</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GiftLink</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 </head>
 
 <body>
+
     <!-- HEADER / MENU -->
     <header>
-        <a href="#" id="logoLink">
-            <div id="logoContainer">
-                <img src="./assets/Logo.png" alt="logo image, snowflake" id="logo">
-                <p>The Gifts</p>
-            </div>
-        </a>
+        <div id="logo-container" class="text-center">
+            <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
+            <p class="text-secondary text-bold">GiftLink</p>
+        </div>
         <nav id="menu">
-            <a href="">Gifts</a>
-            <a href="#about">About</a>
-            <a href="">Best</a>
-            <a href="">Contacts</a>
+            <a href="#gifts" class="text-bold text-uppercase">Gifts</a>
+            <a href="#about" class="text-bold text-uppercase">About</a>
+            <a href="#best" class="text-bold text-uppercase">Best</a>
+            <a href="#contact" class="text-bold text-uppercase">Contact</a>
         </nav>
     </header>
-    <!-- MAIN SECTION -->
+
+    <!-- MAIN HERO SECTION -->
     <main>
-        <section id="heroSection">
-            <div id="heroContainer">
+        <section id="hero-section">
+            <div id="hero-container" class="text-center">
                 <p>Merry Christmas</p>
                 <h1>Gift yourself the magic of new possibilities</h1>
-                <a href=""><button>Explore magical gifts</button></a>
+                <a href="#gifts"><button>Explore Magical Gifts</button></a>
                 <p>and Happy New Year</p>
             </div>
         </section>
+
+        <!-- ABOUT SECTION -->
         <section id="about">
-            <div id="aboutContainer">
+            <div id="about-container">
                 <div>
-                    <p>About</p>
-                    <p>Unleash your inner superhero!</p>
-                    <p>This New Year marks the beginning of your journey to inner harmony and new strengths. 
+                    <p class="text-primary">About</p>
+                    <p class="text-bold text-uppercase">Unleash your inner superhero!</p>
+                    <p class="text-normal">This New Year marks the beginning of your journey to inner harmony and new
+                        strengths.
                         We offer unique gifts that will help you improve your life.</p>
                 </div>
-                <div id="aboutImg"></div>
+                <div id="about-img"></div>
             </div>
         </section>
+
+        <!-- SLIDER SECTION -->
         <section id="slider">
-            <div id="sliderContainer">
-                <div>
-                    <p>Become Happier!</p>
-                    <h2>In the new 2025</h2>
+            <div id="slider-container">
+                <div id="slider-title">
+                    <p class="text-center">Become Happier!</p>
+                    <h2 class="text-uppercase text-center text-bold">In the new 2025</h2>
+                </div>
+                <div id="row">
+                    <div class="slider-text text-uppercase">Live</div>
+                    <div class="slider-img one"></div>
+                    <div class="slider-text text-uppercase">Create</div>
+                    <div class="slider-img two"></div>
+                    <div class="slider-text text-uppercase">Love</div>
+                    <div class="slider-img three"></div>
                 </div>
             </div>
         </section>
     </main>
-    
+
 </body>
 
 </html>
