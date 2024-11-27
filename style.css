@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Allura&family=Buda:wght@300&family=Fondamento:ital@0;1&family=Fugaz+One&family=Gideon+Roman&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pattaya&family=Quando&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #FFFFFF;
     margin: 0;
@@ -31,6 +35,18 @@ html {
     color: #FFFFFF;
 }
 
+.text-blue {
+    color: #4361FF;
+}
+
+.text-green {
+    color: #06A44F;
+}
+
+.text-pink {
+    color: #FF43F7;
+}
+
 .text-bold {
     font-weight: 600;
 }
@@ -39,7 +55,33 @@ html {
     font-weight: 400;
 }
 
-/* HEADER / MENU STYLING */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* HEADER - MENU STYLING */
 header {
     background-color: #FFFFFF;
     display: flex;
@@ -50,12 +92,9 @@ header {
 }
 
 #logo-container {
-    display: flex;
-    align-items: center;
     gap: 8px;
     padding: 8px 20px;
     height: 40px;
-    border-radius: 12px;
     cursor: pointer;
 }
 
@@ -73,9 +112,6 @@ header {
 }
 
 #menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     padding: 12px 20px;
     height: 40px;
 }
@@ -98,7 +134,7 @@ header {
 /* MAIN */
 main {
     background: url(./assets/bg-snow.png), #FF4646;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px;
 }
 
 /* HERO SECTION STYLING */
@@ -108,7 +144,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 524px;
+    height: 700px;
     padding: 60px 8px;
 }
 
@@ -118,11 +154,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 0px;
     gap: 12px;
     width: 426px;
     max-width: 426px;
     height: 404px;
+    margin-top: 100px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -145,7 +181,8 @@ button {
     margin: 7px;
 }
 
-#hero-container button {
+#hero-container button,
+#cta-container button {
     padding: 20px 10px;
     width: 260px;
     height: 56px;
@@ -162,7 +199,6 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 8px 10px 8px;
     height: 648px;
 }
 
@@ -174,7 +210,7 @@ button {
     margin: 10px auto;
     padding: 0px;
     height: 528px;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
 }
 
@@ -183,7 +219,7 @@ button {
     flex-direction: column;
     justify-content: center;
     padding: 0px 60px;
-    width: 30%;
+    width: 50%;
 }
 
 #about-container div p:first-child {
@@ -206,12 +242,13 @@ button {
     background: url(./assets/santa.png) no-repeat center center;
     background-size: cover;
     border-radius: 20px;
-    flex: 0 0 40%;
+    width: 45%;
     height: 100%;
 }
 
 /* SLIDER SECTION */
-#slider {
+#slider, 
+#best-gift {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,24 +256,28 @@ button {
     width: 100%;
 }
 
-#slider-container {
+#slider-container,
+#best-gift-container {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     gap: 20px;
-    width: 80%;
+    width: 90%;
     height: 500px;
 }
 
-#slider-title p {
+#slider-title p,
+#best-gift-title p,
+#cta #cta-timer p {
     font-family: 'Allura';
     margin-bottom: 8px;
     font-size: 28px;
 }
 
-#slider-title h2 {
+#slider-title h2,
+#best-gift-title h2 {
     font-size: 32px;
     margin: 10px;
 }
@@ -248,15 +289,23 @@ button {
     align-items: center;
     padding: 0px;
     height: 200px;
+    width: 100%;
     margin-top: 30px;
-    /* width: 100%; */
+}
+
+#row-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .slider-img {
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .slider-text {
@@ -278,4 +327,242 @@ button {
 
 .three {
     background-image: url('./assets/christmas-tree-ball.png');
+} 
+ 
+.four {
+    background-image: url('./assets/fairytale-house.png');
+} 
+
+#slider-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    margin: 20px;
+    gap: 20px;
+    width: 100%;
+    flex: none;
+}
+
+.slider-button {
+    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.slider-button img {
+    width: 24px;
+    height: 24px;    
+}
+
+.slider-button:hover {
+    background-color: #ffffff6e;
+}
+
+/* BEST GIFT */
+#card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    padding: 0px;
+    gap: 12px;
+    width: 100%;
+    height: 350px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 24%;
+    height: 342px;
+    background: #ECF3F8;
+    border-radius: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+    
+}
+
+.card-img-one,
+.card-img-three {
+    background: url(./assets/gift-for-work.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-two {
+    background: url(./assets/gift-for-health.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-four {
+    background: url(./assets/gift-for-harmony.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 8px;
+    width: 100%;
+    height: 30%;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+h4, h3, h2 {
+    margin: 0px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+}
+
+.card-name h4 {
+    font-size: 11px;
+}
+
+.card-name h3 {
+    font-size: 14px;
+}
+
+/* CTA SECTION STYLING */
+#cta {
+    background: url(./assets/bg-forest.png) no-repeat center bottom;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 8px;
+    height: 750px;
+    margin: 0 auto 0 auto;
+}
+
+#cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    margin: 50px auto 0 auto;
+    gap: 20px;
+    width: 426px;
+    max-width: 426px;
+    height: 428px;
+}
+
+#cta-container {
+    line-height: 152%;
+    letter-spacing: 0.16em;
+}
+
+#cta-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+}
+
+#timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 12px 12px;
+    width: 100%;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.separator {
+    width: 30px;
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(-90deg);
+}
+
+/* FOOTER STYLING */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 8px;
+    height: 500px;
+    background: #FFFFFF;
+}
+
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 90%;
+    height: 400px;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    height: 200px;
+    width: 100%;
+}
+
+#footer-container p {
+    margin: 0;
+}
+
+#phone, #meet, #email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 12px;
+    width: 30%;
+    height: 200px;
+    background: #ECF3F8;
+    border-radius: 20px;
+}
+
+#phone img, #meet img, #email img {
+    width: 100px;
+    height: 100px;
+}
+
+#social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 30px;
+    gap: 12px;
+    width: 200px;
+    height: 40px;
+}
+
+#footer-container p:nth-of-type(2){
+    font-family: 'Allura';
+    font-size: 24px;
 }
