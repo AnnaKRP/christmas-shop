@@ -13,7 +13,7 @@
 <body>
 
     <!-- HEADER / MENU -->
-    <header>
+    <header class="flex-between">
         <div id="logo-container" class="flex-center rounded">
             <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
             <p class="text-secondary text-bold">GiftLink</p>
@@ -22,92 +22,92 @@
             <a href="#gifts" class="text-bold text-uppercase">Gifts</a>
             <a href="#about" class="text-bold text-uppercase">About</a>
             <a href="#best-gift" class="text-bold text-uppercase">Best</a>
-            <a href="#contact" class="text-bold text-uppercase">Contact</a>
+            <a href="#contacts" class="text-bold text-uppercase">Contact</a>
         </nav>
     </header>
 
     <!-- MAIN HERO SECTION -->
     <main>
-        <section id="hero-section">
-            <div id="hero-container" class="text-center">
+        <section id="hero-section" class="flex-center flex-column">
+            <div id="hero-container" class="text-center flex-center flex-column">
                 <p>Merry Christmas</p>
-                <h1>Gift yourself the magic of new possibilities</h1>
-                <a href="#gifts"><button>Explore Magical Gifts</button></a>
+                <h1 class="text-uppercase">Gift yourself the magic of new possibilities</h1>
+                <a href="#gifts"><button id="main-btn" class=" explore-btn text-center text-uppercase text-bold rounded">Explore Magical Gifts</button></a>
                 <p>and Happy New Year</p>
             </div>
         </section>
 
         <!-- ABOUT SECTION -->
-        <section id="about">
-            <div id="about-container">
-                <div>
+        <section id="about" class="flex-center flex-column">
+            <div id="about-container" class="flex-between">
+                <div class="flex-column">
                     <p class="text-primary">About</p>
                     <p class="text-bold text-uppercase">Unleash your inner superhero!</p>
                     <p class="text-normal">This New Year marks the beginning of your journey to inner harmony and new
                         strengths. We offer unique gifts that will help you improve your life.</p>
                 </div>
-                <div id="about-img"></div>
+                <div id="about-img" class="rounded"></div>
             </div>
         </section>
 
         <!-- SLIDER SECTION -->
-        <section id="slider">
-            <div id="slider-container">
+        <section id="slider" class="flex-column">
+            <div id="slider-container" class="flex-column">
                 <div id="slider-title">
                     <p class="text-center">Become Happier!</p>
                     <h2 class="text-uppercase text-center text-bold">In the new 2025</h2>
                 </div>
-                <div id="row">
-                    <div id="row-slider">
-                        <div class="slider-text text-uppercase">Live</div>
+                <div id="row" class="flex-row">
+                    <div id="row-slider" class="flex-row">
+                        <div class="slider-text text-uppercase text-bold">Live</div>
                         <div class="slider-img one"></div>
-                        <div class="slider-text text-uppercase">Create</div>
+                        <div class="slider-text text-uppercase text-bold">Create</div>
                         <div class="slider-img two"></div>
-                        <div class="slider-text text-uppercase">Love</div>
+                        <div class="slider-text text-uppercase text-bold">Love</div>
                         <div class="slider-img three"></div>
-                        <div class="slider-text text-uppercase">Dream</div>
+                        <div class="slider-text text-uppercase text-bold">Dream</div>
                         <div class="slider-img four"></div>
                     </div>
                 </div>
-                <div id="slider-buttons">
-                    <button id="left-button" class="slider-button" aria-label="Scroll Left"><img src="./assets/leftbtn.png"></button>
-                    <button id="right-button" class="slider-button" aria-label="Scroll Right"><img src="./assets/rightbtn.png"></button>
+                <div id="slider-buttons" class="flex-row">
+                    <button id="left-button" class="slider-button rounded" aria-label="Scroll Left"><img src="./assets/leftbtn.png"></button>
+                    <button id="right-button" class="slider-button rounded" aria-label="Scroll Right"><img src="./assets/rightbtn.png"></button>
                 </div>
             </div>
         </section>
 
         <!-- BEST GIFT SECTION -->
-        <section id="best-gift">
-            <div id="best-gift-container">
+        <section id="best-gift" class="flex-column">
+            <div id="best-gift-container" class="flex-column">
                 <div id="best-gift-title">
                     <p class="text-center">Best Gifts</p>
                     <h2 class="text-uppercase text-center text-bold">Especially for you</h2>
                 </div>
-                <div id="card-container">
-                    <div class="card">
+                <div id="card-container" class="flex-row">
+                    <div class="card" class="flex-column">
                         <div class="card-img card-img-one"></div>
-                        <div class="card-name">
+                        <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">console.lo guru</h3>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" class="flex-column">
                         <div class="card-img card-img-two"></div>
-                        <div class="card-name">
+                        <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-green">For health</h4>
                             <h3 class="text-uppercase text-secondary">hydration bot</h3>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" class="flex-column">
                         <div class="card-img card-img-three"></div>
-                        <div class="card-name">
+                        <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">merge master</h3>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" class="flex-column">
                         <div class="card-img card-img-four"></div>
-                        <div class="card-name">
+                        <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
                             <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
                         </div>
@@ -117,13 +117,13 @@
         </section>
 
         <!-- CTA SECTION -->
-        <section id="cta">
-            <div id="cta-container">
+        <section id="cta" class="flex-column">
+            <div id="cta-container" class="flex-column">
                 <h2 class="text-uppercase text-center text-white">Ready to start your journey to a better version of yourself?</h2>
-                <button>Explore magical gifts</button>
-                <div id="cta-timer">
+                <a href="#gifts"><button id="cta-btn" class=" explore-btn text-center text-uppercase text-bold rounded">Explore Magical Gifts</button></a>
+                <div id="cta-timer" class="flex-column">
                     <p id="par" class="text-white text-center">The New Year is Coming Soon...</p>
-                    <div id="timer">
+                    <div id="timer" class="flex-row">
                         <div id="days">
                             <h2 class="text-white text-center text-bold">47</h2>
                             <h4 class="text-white text-center text-bold text-uppercase">Days</h4>
@@ -150,33 +150,33 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div id="footer-container">
-            <div id="contacts">
-                <div id="phone">
+    <footer class="flex-column">
+        <div id="footer-container" class="flex-column">
+            <div id="contacts" class="flex-row">
+                <div id="phone" class="flex-column">
                     <img src="./assets/santa-clause.png" alt="santa claus">
                     <h3>+375 (29) 111-22-33</h3>
                     <p class="text-secondary text-uppercase text-bold">Call Us</p>
                 </div>
-                <div id="meet">
+                <div id="meet" class="flex-column">
                     <img src="./assets/tree.png" alt="christmas tree">
                     <h3 class="text-uppercase">Magic forest</h3>
                     <p class="text-secondary text-uppercase text-bold">Meet Us</p>
                 </div>
-                <div id="email">
+                <div id="email" class="flex-column">
                     <img src="./assets/snake.png" alt="snake">
                     <h3 class="text-uppercase">gifts@magic.com</h3>
                     <p class="text-secondary text-uppercase text-bold">Write Us</p>
                 </div>
             </div>
-            <div id="social-media">
-                <img src="./assets/telegram.png" alt="telegram icon">
-                <img src="./assets/facebook.png" alt="facebook icon">
-                <img src="./assets/instagram.png" alt="instagram icon">
-                <img src="./assets/X.png" alt="x icon">
+            <div id="social-media" class="flex-row">
+                <a href="#"><img src="./assets/telegram.png" alt="telegram icon" class="social-icon rounded"></a>
+                <a href="#"><img src="./assets/facebook.png" alt="facebook icon" class="social-icon rounded"></a>
+                <a href="#"><img src="./assets/instagram.png" alt="instagram icon" class="social-icon rounded"></a>
+                <a href="#"><img src="./assets/X.png" alt="x icon" class="social-icon rounded"></a>
             </div>
             <p>© Copyright 2025, All Rights Reserved</p>
-            <p>Made in Rolling Scopes School</p>
+            <a href="#" id="school-link"><p>Made in Rolling Scopes School</p></a>
         </div>
     </footer>
 

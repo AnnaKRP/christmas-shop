@@ -70,6 +70,13 @@ html {
 .flex-column {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .rounded {
@@ -84,9 +91,6 @@ html {
 /* HEADER - MENU STYLING */
 header {
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 64px;
     padding: 0px 8px;
 }
@@ -105,7 +109,6 @@ header {
 
 #logo-container p {
     font-family: 'Montserrat';
-    font-weight: 600;
     font-size: 20px;
     line-height: 130%;
     letter-spacing: 0.05em;
@@ -141,19 +144,12 @@ main {
 #hero-section {
     background: url(./assets/bg-ball.png) no-repeat center top;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 700px;
     padding: 60px 8px;
 }
 
 #hero-container {
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 12px;
     width: 426px;
     max-width: 426px;
@@ -170,43 +166,41 @@ main {
 #hero-container h1,
 button {
     line-height: 150%;
-    text-align: center;
     letter-spacing: 0.18em;
-    text-transform: uppercase;
 }
 
 #hero-container h1 {
-    font-weight: 600;
     font-size: 30px;
     margin: 7px;
 }
 
-#hero-container button,
-#cta-container button {
+.explore-btn {
+    font-family: 'Montserrat';
     padding: 20px 10px;
     width: 260px;
     height: 56px;
     background: #181C29;
-    border-radius: 20px;
     border: none;
     color: #FFFFFF;
     font-size: 12px;
+    cursor: pointer;
+    line-height: 150%;
+    letter-spacing: 0.18em;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #FFFFFF;
+    color: #181C29;
 }
 
 /* ABOUT SECTION */
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 648px;
 }
 
 #about-container {
     background: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 10px auto;
     padding: 0px;
     height: 528px;
@@ -215,33 +209,27 @@ button {
 }
 
 #about-container div {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 0px 60px;
+    padding: 0px 70px;
     width: 50%;
 }
 
 #about-container div p:first-child {
-    color: #FF4646;
     font-family: 'Allura';
     font-size: 32px;
 }
 
 #about-container div p:nth-child(2) {
-    font-weight: 600;
     font-size: 24px;
 }
 
 #about-container div p:last-child {
-    font-weight: 400;
     font-size: 16px;
 }
 
 #about-img {
     background: url(./assets/santa.png) no-repeat center center;
     background-size: cover;
-    border-radius: 20px;
     width: 45%;
     height: 100%;
 }
@@ -249,9 +237,6 @@ button {
 /* SLIDER SECTION */
 #slider, 
 #best-gift {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 40px 8px;
     width: 100%;
 }
@@ -259,9 +244,6 @@ button {
 #slider-container,
 #best-gift-container {
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0px;
     gap: 20px;
     width: 90%;
@@ -283,10 +265,7 @@ button {
 }
 
 #row {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     padding: 0px;
     height: 200px;
     width: 100%;
@@ -294,10 +273,7 @@ button {
 }
 
 #row-slider {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
 }
 
 .slider-img {
@@ -310,7 +286,6 @@ button {
 
 .slider-text {
     left: 10px;
-    font-weight: 600;
     font-size: 16px;
     font-size: 80px;
     line-height: 98px;
@@ -334,10 +309,7 @@ button {
 } 
 
 #slider-buttons {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     padding: 0px;
     margin: 20px;
     gap: 20px;
@@ -365,8 +337,6 @@ button {
 
 /* BEST GIFT */
 #card-container {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -378,9 +348,6 @@ button {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0px;
     width: 24%;
     height: 342px;
@@ -391,7 +358,6 @@ button {
 .card-img {
     width: 100%;
     height: 70%;
-    
 }
 
 .card-img-one,
@@ -414,8 +380,6 @@ button {
 }
 
 .card-name {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     gap: 8px;
@@ -443,19 +407,13 @@ h4, h3, h2 {
 #cta {
     background: url(./assets/bg-forest.png) no-repeat center bottom;
     background-size: contain;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 60px 8px;
     height: 750px;
     margin: 0 auto 0 auto;
 }
 
 #cta-container {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 60px 0px;
     margin: 50px auto 0 auto;
     gap: 20px;
@@ -470,18 +428,12 @@ h4, h3, h2 {
 }
 
 #cta-timer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0px;
     gap: 8px;
     width: 100%;
 }
 
 #timer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     padding: 8px 12px 12px;
     width: 100%;
@@ -499,18 +451,12 @@ h4, h3, h2 {
 
 /* FOOTER STYLING */
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 60px 8px;
     height: 500px;
     background: #FFFFFF;
 }
 
 #footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0px;
     gap: 10px;
     width: 90%;
@@ -518,10 +464,7 @@ footer {
 }
 
 #contacts {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 0px;
     gap: 12px;
     height: 200px;
@@ -533,16 +476,18 @@ footer {
 }
 
 #phone, #meet, #email {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 20px;
     gap: 12px;
     width: 30%;
     height: 200px;
     background: #ECF3F8;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+#phone:hover, #meet:hover, #email:hover {
+    color: #FF4646;
 }
 
 #phone img, #meet img, #email img {
@@ -551,18 +496,30 @@ footer {
 }
 
 #social-media {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 0px;
     margin: 30px;
     gap: 12px;
-    width: 200px;
+    width: auto;
     height: 40px;
 }
 
-#footer-container p:nth-of-type(2){
+#footer-container #social-media .social-icon {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+#footer-container #social-media .social-icon:hover {
+    background-color: #ECF3F8;
+}
+
+#school-link {
     font-family: 'Allura';
-    font-size: 24px;
+    font-size: 26px;
+    text-decoration: none;
+    color: #181C29;
+}
+
+#school-link:hover {
+    color:#FF4646;
 }
