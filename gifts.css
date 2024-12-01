@@ -1,0 +1,126 @@
+/* GIFTS PAGE */
+
+#gift-section {
+    background: url(./assets/bg-garland.png) no-repeat center top;
+    background-size: contain;
+    padding: 60px 8px;
+}
+
+#gift-container {
+    padding: 0px;
+    gap: 20px;
+    width: 90%;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    letter-spacing: 0.18em;
+    width: 426px;
+}
+
+#tabs {
+    justify-content: center;
+    padding: 0px;
+    gap: 8px;
+    height: 40px;
+}
+
+#tabs a {
+    padding: 12px 20px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+}
+
+#tabs a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CARD CONTAINER */
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    gap: 12px;
+    width: 100%;
+}
+
+.card {
+    padding: 0px;
+    height: 342px;
+    background: #ECF3F8;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card:hover h3 {
+    color: #FF4646;
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+}
+
+.card-img-one {
+    background: url(./assets/gift-for-work.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-two {
+    background: url(./assets/gift-for-health.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-four {
+    background: url(./assets/gift-for-harmony.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-name {
+    align-items: flex-start;
+    padding: 20px;
+    gap: 8px;
+    width: 100%;
+    height: 30%;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+h4, h3, h2, h1 {
+    margin: 0px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+}
+
+.card-name h4 {
+    font-size: 11px;
+}
+
+.card-name h3 {
+    font-size: 14px;
+}
+
+
+/* MEDIA SCREENS */
+
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 22px;
+        width: auto;
+    }
+
+    #tabs a {
+        padding: 12px 0px;
+        height: 20px;
+        font-size: 10px;
+    }
+}

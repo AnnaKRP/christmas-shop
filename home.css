@@ -1,0 +1,368 @@
+/* HOME PAGE */
+
+/* HERO SECTION STYLING */
+#hero-section {
+    background: url(./assets/bg-ball.png) no-repeat center top;
+    background-size: contain;
+    height: 524px;
+    padding: 60px 8px;
+}
+
+#hero-container {
+    color: #FFFFFF;
+    gap: 12px;
+    width: 426px;
+    max-width: 426px;
+    height: 404px;
+    padding: 60px 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#hero-container p {
+    font-family: 'Allura';
+    font-size: 24px;
+    margin: 0;
+}
+
+#hero-container h1,
+button {
+    line-height: 150%;
+    letter-spacing: 0.18em;
+}
+
+#hero-container h1 {
+    font-size: 30px;
+    margin: 7px;
+}
+
+.explore-btn {
+    font-family: 'Montserrat';
+    padding: 20px 10px;
+    width: 240px;
+    height: 56px;
+    background: #181C29;
+    border: none;
+    color: #FFFFFF;
+    font-size: 11px;
+    cursor: pointer;
+    line-height: 150%;
+    letter-spacing: 0.18em;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #FFFFFF;
+    color: #181C29;
+}
+
+/* ABOUT SECTION */
+#about {
+    height: 648px;
+}
+
+#about-container {
+    background: #FFFFFF;
+    margin: 10px auto;
+    padding: 0px;
+    height: 528px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+#about-container div {
+    justify-content: center;
+    align-items: flex-start !important;
+    padding: 0px 70px;
+    width: 45%;
+    line-height: 150%;
+}
+
+#about-container div p:first-child {
+    font-family: 'Allura';
+    font-size: 26px;
+    margin: 0;
+}
+
+#about-container div p:nth-child(2) {
+    font-size: 24px;
+    letter-spacing: 0.18em;
+    line-height: 152%;
+}
+
+#about-container div p:last-child {
+    font-size: 16px;
+}
+
+#about-img {
+    background: url(./assets/santa.png) no-repeat center center;
+    background-size: cover;
+    width: 50% !important;
+    height: 100%;
+}
+
+/* SLIDER SECTION */
+#slider,
+#best-gift {
+    padding: 28px 8px;
+    width: 100%;
+}
+
+#slider-container,
+#best-gift-container {
+    color: #FFFFFF;
+    padding: 0px;
+    gap: 20px;
+    width: 90%;
+    height: auto;
+}
+
+#slider-title p,
+#best-gift-title p,
+#cta #cta-timer p {
+    font-family: 'Allura';
+    margin: 14px;
+    font-size: 28px;
+}
+
+#slider-title h2,
+#best-gift-title h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+#row {
+    justify-content: flex-start;
+    padding: 0px;
+    height: 200px;
+    width: 100%;
+}
+
+#row-slider {
+    justify-content: flex-start;
+}
+
+.slider-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-text {
+    left: 10px;
+    font-size: 16px;
+    font-size: 80px;
+    line-height: 98px;
+    padding: 18px;
+}
+
+.one {
+    background-image: url('./assets/snowman.png');
+}
+
+.two {
+    background-image: url('./assets/christmas-trees.png');
+}
+
+.three {
+    background-image: url('./assets/christmas-tree-ball.png');
+}
+
+.four {
+    background-image: url('./assets/fairytale-house.png');
+}
+
+#slider-buttons {
+    justify-content: flex-end;
+    padding: 0px;
+    margin: 20px;
+    gap: 20px;
+    width: 100%;
+    flex: none;
+}
+
+.slider-button {
+    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.slider-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.slider-button:hover {
+    background-color: #ffffff6e;
+}
+
+/* BEST GIFT */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    gap: 12px;
+    width: 100%;
+}
+
+.card {
+    padding: 0px;
+    height: 342px;
+    background: #ECF3F8;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card:hover h3 {
+    color: #FF4646;
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+}
+
+.card-img-one,
+.card-img-three {
+    background: url(./assets/gift-for-work.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-two {
+    background: url(./assets/gift-for-health.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-four {
+    background: url(./assets/gift-for-harmony.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-name {
+    align-items: flex-start;
+    padding: 20px;
+    gap: 8px;
+    width: 100%;
+    height: 30%;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+h4,
+h3,
+h2 {
+    margin: 0px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+}
+
+.card-name h4 {
+    font-size: 11px;
+}
+
+.card-name h3 {
+    font-size: 14px;
+}
+
+/* CTA SECTION STYLING */
+#cta {
+    background: url(./assets/bg-forest.png) no-repeat center bottom;
+    background-size: contain;
+    padding: 60px 8px;
+    height: 700px;
+    margin: 0 auto 0 auto;
+}
+
+#cta-container {
+    justify-content: center;
+    padding: 60px 0px;
+    margin: 80px auto 0 auto;
+    gap: 20px;
+    max-width: 426px;
+    height: 428px;
+}
+
+#cta-container>h2 {
+    line-height: 152%;
+    letter-spacing: 0.16em;
+}
+
+#cta-timer {
+    padding: 0px;
+    width: 100%;
+}
+
+#cta-timer p {
+    font-size: 24px;
+}
+
+#timer {
+    justify-content: space-around;
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 100%;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    width: 344px;
+}
+
+.separator {
+    width: 30px;
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(-90deg);
+}
+
+
+/* MEDIA SCREENS */
+
+@media screen and (max-width: 768px) {
+    #hero-section {
+        background-size: cover;
+    }
+    
+    #about-container {
+        height: 628px;
+    }
+
+    .slider-text {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #hero-section {
+        background-size: cover;
+    }
+
+    #hero-container h1 {
+        font-size: 24px;
+    }
+
+    #about-container {
+        flex-direction: column;
+        height: 628px;
+    }
+
+    #about-container div {
+        padding: 25px 10px 0 10px;
+        width: 100%;
+    }
+
+    #about-img {
+        width: 100% !important;
+    }
+
+    .slider-text {
+        font-size: 50px;
+    }
+}
