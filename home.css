@@ -262,6 +262,7 @@ h2 {
     margin: 0px;
     line-height: 152%;
     letter-spacing: 0.08em;
+    transition: color 0.5s ease;
 }
 
 .card-name h4 {

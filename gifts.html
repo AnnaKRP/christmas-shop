@@ -8,7 +8,7 @@
     <title>GiftLink</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./gifts.css">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
 
 <body>
@@ -50,84 +50,84 @@
 
                 <!-- CARD CONTAINER -->
                 <div id="card-container">
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-one"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">console.lo guru</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-two"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-green">For health</h4>
                             <h3 class="text-uppercase text-secondary">Step master</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-one"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">Bug magnet</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-one"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">Shortcut cheater</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-two"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-green">For health</h4>
                             <h3 class="text-uppercase text-secondary">Posture levitation</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-four"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
                             <h3 class="text-uppercase text-secondary">Bug acceptance guru</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-two"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-green">For health</h4>
                             <h3 class="text-uppercase text-secondary">Snack resister</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-four"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
                             <h3 class="text-uppercase text-secondary">Error laugher</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-two"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-green">For health</h4>
                             <h3 class="text-uppercase text-secondary">Hydration bot</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-one"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-blue">For work</h4>
                             <h3 class="text-uppercase text-secondary">Merge master</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-four"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
                             <h3 class="text-uppercase text-secondary">Joy charger</h3>
                         </div>
                     </div>
-                    <div class="card" class="flex-column">
+                    <div class="card flex-column">
                         <div class="card-img card-img-four"></div>
                         <div class="card-name flex-column">
                             <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
@@ -144,7 +144,7 @@
     <footer class="flex-column">
         <div id="footer-container" class="flex-column">
             <div id="contacts">
-                <a href="tel:+375 (29) 111-22-33">
+                <a href="tel:+375291112233">
                     <div id="phone" class="flex-column">
                         <img src="./assets/santa-clause.png" alt="santa claus">
                         <h3>+375 (29) 111-22-33</h3>
@@ -183,15 +183,33 @@
             const menu = document.getElementById('menu');
             const menuLinks = menu.querySelectorAll('a');
 
+            // toggle the active class on the menu and burger icon when burger menu is clicked
             burgerMenu.addEventListener('click', () => {
-                menu.classList.toggle('active');
-                burgerMenu.classList.toggle('open');
+                menu
+                    .classList
+                    .toggle('active');
+                burgerMenu
+                    .classList
+                    .toggle('open');
+                document
+                    .body
+                    .classList
+                    .toggle('no-scroll');
             });
 
+            // remove active class when any menu link is clicked, closing the menu
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    menu.classList.remove('active');
-                    burgerMenu.classList.remove('open');
+                    menu
+                        .classList
+                        .remove('active');
+                    burgerMenu
+                        .classList
+                        .remove('open');
+                    document
+                        .body
+                        .classList
+                        .remove('no-scroll');
                 });
             });
         });

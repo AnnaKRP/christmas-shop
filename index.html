@@ -1,232 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GiftLink</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./home.css">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>GiftLink</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./home.css">
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    </head>
 
-<body>
+    <body>
 
-    <!-- HEADER / MENU -->
-    <header class="flex-between">
-        <a href="#logo-container">
-            <div id="logo-container" class="flex-center rounded">
-                <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
-                <p class="text-secondary text-bold text-uppercase">The Gifts</p>
-            </div>
-        </a>
-        <!-- burger -->
-        <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <!-- menu -->
-        <nav id="menu" class="flex-center">
-            <a href="./gifts.html" class="text-bold text-uppercase">Gifts</a>
-            <a href="#about" class="text-bold text-uppercase">About</a>
-            <a href="#best-gift" class="text-bold text-uppercase">Best</a>
-            <a href="#contacts" class="text-bold text-uppercase">Contacts</a>
-        </nav>
-    </header>
-
-    <!-- MAIN HERO SECTION -->
-    <main>
-        <section id="hero-section" class="flex-center flex-column">
-            <div id="hero-container" class="text-center flex-center flex-column">
-                <p>Merry Christmas</p>
-                <h1 class="text-uppercase">Gift yourself the magic of new possibilities</h1>
-                <a href="./gifts.html"><button id="main-btn"
-                        class=" explore-btn text-center text-uppercase text-bold rounded">Explore Magical
-                        Gifts</button></a>
-                <p>and Happy New Year</p>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="flex-center flex-column">
-            <div id="about-container" class="flex-between">
-                <div class="flex-column">
-                    <p class="text-primary">About</p>
-                    <p class="text-bold text-uppercase">Unleash your inner superhero!</p>
-                    <p class="text-normal">This New Year marks the beginning of your journey to inner harmony and new
-                        strengths. We offer unique gifts that will help you improve your life.</p>
+        <!-- HEADER / MENU -->
+        <header class="flex-between">
+            <a href="#logo-container">
+                <div id="logo-container" class="flex-center rounded">
+                    <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
+                    <p class="text-secondary text-bold text-uppercase">The Gifts</p>
                 </div>
-                <div id="about-img" class="rounded"></div>
-            </div>
-        </section>
-
-        <!-- SLIDER SECTION -->
-        <section id="slider" class="flex-column">
-            <div id="slider-container" class="flex-column">
-                <div id="slider-title">
-                    <p class="text-center">Become Happier!</p>
-                    <h2 class="text-uppercase text-center text-bold">In the new 2025</h2>
-                </div>
-                <div id="row" class="flex-row">
-                    <div id="row-slider" class="flex-row">
-                        <div class="slider-text text-uppercase text-bold">Live</div>
-                        <div class="slider-img one"></div>
-                        <div class="slider-text text-uppercase text-bold">Create</div>
-                        <div class="slider-img two"></div>
-                        <div class="slider-text text-uppercase text-bold">Love</div>
-                        <div class="slider-img three"></div>
-                        <div class="slider-text text-uppercase text-bold">Dream</div>
-                        <div class="slider-img four"></div>
-                    </div>
-                </div>
-                <div id="slider-buttons" class="flex-row">
-                    <button id="left-button" class="slider-button rounded" aria-label="Scroll Left"><img
-                            src="./assets/leftbtn.png"></button>
-                    <button id="right-button" class="slider-button rounded" aria-label="Scroll Right"><img
-                            src="./assets/rightbtn.png"></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- BEST GIFT SECTION -->
-        <section id="best-gift" class="flex-column">
-            <div id="best-gift-container">
-                <div id="best-gift-title">
-                    <p class="text-center">Best Gifts</p>
-                    <h2 class="text-uppercase text-center text-bold">Especially for you</h2>
-                </div>
-                <div id="card-container" class="flex-row">
-                    <div class="card" class="flex-column">
-                        <div class="card-img card-img-one"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">console.lo guru</h3>
-                        </div>
-                    </div>
-                    <div class="card" class="flex-column">
-                        <div class="card-img card-img-two"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-green">For health</h4>
-                            <h3 class="text-uppercase text-secondary">hydration bot</h3>
-                        </div>
-                    </div>
-                    <div class="card" class="flex-column">
-                        <div class="card-img card-img-three"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">merge master</h3>
-                        </div>
-                    </div>
-                    <div class="card" class="flex-column">
-                        <div class="card-img card-img-four"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                            <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA SECTION -->
-        <section id="cta" class="flex-column">
-            <div id="cta-container" class="flex-column">
-                <h2 class="text-uppercase text-center text-white">Ready to start your journey to a better version of
-                    yourself?</h2>
-                <a href="./gifts.html"><button id="cta-btn"
-                        class=" explore-btn text-center text-uppercase text-bold rounded">Explore Magical
-                        Gifts</button></a>
-                <div id="cta-timer" class="flex-column">
-                    <p id="par" class="text-white text-center">The New Year is Coming Soon...</p>
-                    <div id="timer" class="flex-row">
-                        <div id="days">
-                            <h2 class="text-white text-center text-bold">47</h2>
-                            <h4 class="text-white text-center text-bold text-uppercase">Days</h4>
-                        </div>
-                        <div class="separator"></div>
-                        <div id="hours">
-                            <h2 class="text-white text-center text-bold">5</h2>
-                            <h4 class="text-white text-center text-bold text-uppercase">Hours</h4>
-                        </div>
-                        <div class="separator"></div>
-                        <div id="mins">
-                            <h2 class="text-white text-center text-bold">34</h2>
-                            <h4 class="text-white text-center text-bold text-uppercase">Minutes</h4>
-                        </div>
-                        <div class="separator"></div>
-                        <div id="seconds">
-                            <h2 class="text-white text-center text-bold">12</h2>
-                            <h4 class="text-white text-center text-bold text-uppercase">Seconds</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="flex-column">
-        <div id="footer-container" class="flex-column">
-            <div id="contacts">
-                <a href="tel:+375 (29) 111-22-33">
-                    <div id="phone" class="flex-column">
-                        <img src="./assets/santa-clause.png" alt="santa claus">
-                        <h3>+375 (29) 111-22-33</h3>
-                        <p class="text-secondary text-uppercase text-bold">Call Us</p>
-                    </div>
-                </a>
-                <a href="https://maps.app.goo.gl/32WinKbwLyHUkpVs9">
-                    <div id="meet" class="flex-column">
-                        <img src="./assets/tree.png" alt="christmas tree">
-                        <h3 class="text-uppercase">Magic forest</h3>
-                        <p class="text-secondary text-uppercase text-bold">Meet Us</p>
-                    </div>
-                </a>
-                <a href="mailto:your-email@example.com">
-                    <div id="email" class="flex-column">
-                        <img src="./assets/snake.png" alt="snake">
-                        <h3 class="text-uppercase">gifts@magic.com</h3>
-                        <p class="text-secondary text-uppercase text-bold">Write Us</p>
-                    </div>
-                </a>
-            </div>
-            <div id="social-media" class="flex-row">
-                <a href="https://rs.school/"><img src="./assets/telegram.png" alt="telegram icon"
-                        class="social-icon rounded"></a>
-                <a href="https://rs.school/"><img src="./assets/facebook.png" alt="facebook icon"
-                        class="social-icon rounded"></a>
-                <a href="https://rs.school/"><img src="./assets/instagram.png" alt="instagram icon"
-                        class="social-icon rounded"></a>
-                <a href="https://rs.school/"><img src="./assets/X.png" alt="x icon" class="social-icon rounded"></a>
-            </div>
-            <p>© Copyright 2025, All Rights Reserved</p>
-            <a href="https://rs.school/" id="school-link">
-                <p>Made in Rolling Scopes School</p>
             </a>
-        </div>
-    </footer>
+            <!-- burger -->
+            <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- menu -->
+            <nav id="menu" class="flex-center">
+                <a href="./gifts.html" class="text-bold text-uppercase">Gifts</a>
+                <a href="#about" class="text-bold text-uppercase">About</a>
+                <a href="#best-gift" class="text-bold text-uppercase">Best</a>
+                <a href="#contacts" class="text-bold text-uppercase">Contacts</a>
+            </nav>
+        </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burgerMenu = document.getElementById('burger-menu');
-            const menu = document.getElementById('menu');
-            const menuLinks = menu.querySelectorAll('a');
+        <!-- MAIN HERO SECTION -->
+        <main>
+            <section id="hero-section" class="flex-center flex-column">
+                <div id="hero-container" class="text-center flex-center flex-column">
+                    <p>Merry Christmas</p>
+                    <h1 class="text-uppercase">Gift yourself the magic of new possibilities</h1>
+                    <a
+                        href="./gifts.html"
+                        id="main-btn"
+                        class="explore-btn text-center text-uppercase text-bold rounded">
+                        Explore Magical Gifts
+                    </a>
+                    <p>and Happy New Year</p>
+                </div>
+            </section>
 
-            burgerMenu.addEventListener('click', () => {
-                menu.classList.toggle('active');
-                burgerMenu.classList.toggle('open');
-            });
+            <!-- ABOUT SECTION -->
+            <section id="about" class="flex-center flex-column">
+                <div id="about-container" class="flex-between">
+                    <div class="flex-column">
+                        <p class="text-primary">About</p>
+                        <p class="text-bold text-uppercase">Unleash your inner superhero!</p>
+                        <p class="text-normal">This New Year marks the beginning of your journey to
+                            inner harmony and new strengths. We offer unique gifts that will help you
+                            improve your life.</p>
+                    </div>
+                    <div id="about-img" class="rounded"></div>
+                </div>
+            </section>
 
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.remove('active');
-                    burgerMenu.classList.remove('open');
+            <!-- SLIDER SECTION -->
+            <section id="slider" class="flex-column">
+                <div id="slider-container" class="flex-column">
+                    <div id="slider-title">
+                        <p class="text-center">Become Happier!</p>
+                        <h2 class="text-uppercase text-center text-bold">In the new 2025</h2>
+                    </div>
+                    <div id="row" class="flex-row">
+                        <div id="row-slider" class="flex-row">
+                            <div class="slider-text text-uppercase text-bold">Live</div>
+                            <div class="slider-img one"></div>
+                            <div class="slider-text text-uppercase text-bold">Create</div>
+                            <div class="slider-img two"></div>
+                            <div class="slider-text text-uppercase text-bold">Love</div>
+                            <div class="slider-img three"></div>
+                            <div class="slider-text text-uppercase text-bold">Dream</div>
+                            <div class="slider-img four"></div>
+                        </div>
+                    </div>
+                    <div id="slider-buttons" class="flex-row">
+                        <button id="left-button" class="slider-button rounded" aria-label="Scroll Left"><img src="./assets/leftbtn.png" alt="left button"></button>
+                        <button id="right-button" class="slider-button rounded" aria-label="Scroll Right"><img src="./assets/rightbtn.png" alt="right button"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BEST GIFT SECTION -->
+            <section id="best-gift" class="flex-column">
+                <div id="best-gift-container">
+                    <div id="best-gift-title">
+                        <p class="text-center">Best Gifts</p>
+                        <h2 class="text-uppercase text-center text-bold">Especially for you</h2>
+                    </div>
+                    <div id="card-container" class="flex-row">
+                        <div class="card flex-column">
+                            <div class="card-img card-img-one"></div>
+                            <div class="card-name flex-column">
+                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                                <h3 class="text-uppercase text-secondary">console.lo guru</h3>
+                            </div>
+                        </div>
+                        <div class="card flex-column">
+                            <div class="card-img card-img-two"></div>
+                            <div class="card-name flex-column">
+                                <h4 class="text-uppercase text-bold text-green">For health</h4>
+                                <h3 class="text-uppercase text-secondary">hydration bot</h3>
+                            </div>
+                        </div>
+                        <div class="card flex-column">
+                            <div class="card-img card-img-three"></div>
+                            <div class="card-name flex-column">
+                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                                <h3 class="text-uppercase text-secondary">merge master</h3>
+                            </div>
+                        </div>
+                        <div class="card flex-column">
+                            <div class="card-img card-img-four"></div>
+                            <div class="card-name flex-column">
+                                <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
+                                <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA SECTION -->
+            <section id="cta" class="flex-column">
+                <div id="cta-container" class="flex-column">
+                    <h2 class="text-uppercase text-center text-white">Ready to start your journey to a better version of yourself?</h2>
+                    <a
+                        href="./gifts.html"
+                        id="cta-btn"
+                        class="explore-btn text-center text-uppercase text-bold rounded">
+                        Explore Magical Gifts
+                    </a>
+                    <div id="cta-timer" class="flex-column">
+                        <p id="par" class="text-white text-center">The New Year is Coming Soon...</p>
+                        <div id="timer" class="flex-row">
+                            <div id="days">
+                                <h2 class="text-white text-center text-bold">47</h2>
+                                <h4 class="text-white text-center text-bold text-uppercase">Days</h4>
+                            </div>
+                            <div class="separator"></div>
+                            <div id="hours">
+                                <h2 class="text-white text-center text-bold">5</h2>
+                                <h4 class="text-white text-center text-bold text-uppercase">Hours</h4>
+                            </div>
+                            <div class="separator"></div>
+                            <div id="mins">
+                                <h2 class="text-white text-center text-bold">34</h2>
+                                <h4 class="text-white text-center text-bold text-uppercase">Minutes</h4>
+                            </div>
+                            <div class="separator"></div>
+                            <div id="seconds">
+                                <h2 class="text-white text-center text-bold">12</h2>
+                                <h4 class="text-white text-center text-bold text-uppercase">Seconds</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="flex-column">
+            <div id="footer-container" class="flex-column">
+                <div id="contacts">
+                    <a href="tel:+375291112233">
+                        <div id="phone" class="flex-column">
+                            <img src="./assets/santa-clause.png" alt="santa claus">
+                            <h3>+375 (29) 111-22-33</h3>
+                            <p class="text-secondary text-uppercase text-bold">Call Us</p>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/32WinKbwLyHUkpVs9">
+                        <div id="meet" class="flex-column">
+                            <img src="./assets/tree.png" alt="christmas tree">
+                            <h3 class="text-uppercase">Magic forest</h3>
+                            <p class="text-secondary text-uppercase text-bold">Meet Us</p>
+                        </div>
+                    </a>
+                    <a href="mailto:your-email@example.com">
+                        <div id="email" class="flex-column">
+                            <img src="./assets/snake.png" alt="snake">
+                            <h3 class="text-uppercase">gifts@magic.com</h3>
+                            <p class="text-secondary text-uppercase text-bold">Write Us</p>
+                        </div>
+                    </a>
+                </div>
+                <div id="social-media" class="flex-row">
+                    <a href="https://rs.school/"><img
+                        src="./assets/telegram.png"
+                        alt="telegram icon"
+                        class="social-icon rounded"></a>
+                    <a href="https://rs.school/"><img
+                        src="./assets/facebook.png"
+                        alt="facebook icon"
+                        class="social-icon rounded"></a>
+                    <a href="https://rs.school/"><img
+                        src="./assets/instagram.png"
+                        alt="instagram icon"
+                        class="social-icon rounded"></a>
+                    <a href="https://rs.school/"><img src="./assets/X.png" alt="x icon" class="social-icon rounded"></a>
+                </div>
+                <p>© Copyright 2025, All Rights Reserved</p>
+                <a href="https://rs.school/" id="school-link">
+                    <p>Made in Rolling Scopes School</p>
+                </a>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const burgerMenu = document.getElementById('burger-menu');
+                const menu = document.getElementById('menu');
+                const menuLinks = menu.querySelectorAll('a');
+
+                // toggle the active class on the menu and burger icon when burger menu is clicked
+                burgerMenu.addEventListener('click', () => {
+                    menu
+                        .classList
+                        .toggle('active');
+                    burgerMenu
+                        .classList
+                        .toggle('open');
+                    document
+                        .body
+                        .classList
+                        .toggle('no-scroll');
+                });
+
+                // remove active class when any menu link is clicked, closing the menu
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu
+                            .classList
+                            .remove('active');
+                        burgerMenu
+                            .classList
+                            .remove('open');
+                        document
+                            .body
+                            .classList
+                            .remove('no-scroll');
+                    });
                 });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>
