@@ -1,5 +1,12 @@
 /* HOME PAGE */
 
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 /* HERO SECTION STYLING */
 #hero-section {
     background: url(./assets/bg-ball.png) no-repeat center top;
@@ -72,14 +79,14 @@ button {
 #about-container div {
     justify-content: center;
     align-items: flex-start !important;
-    padding: 0px 70px;
-    width: 45%;
+    padding: 0px 2.5em;
+    width: 48%;
     line-height: 150%;
 }
 
-#about-container div p:first-child {
+#about-container div h2 {
     font-family: 'Allura';
-    font-size: 26px;
+    font-size: 28px;
     margin: 0;
 }
 
@@ -330,13 +337,47 @@ h2 {
     #hero-section {
         background-size: cover;
     }
-    
+
+    #about {
+        height: auto;
+    }
+
     #about-container {
-        height: 628px;
+        width: 95%;
+    }
+
+    #about-container div p:nth-child(2) {
+        font-size: 22px;
+    }
+
+    #about-container div p:last-child {
+        font-size: 16px;
     }
 
     .slider-text {
         font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hero-container h1 {
+        font-size: 28px;
+    }
+
+    #about-container div {
+        padding: 0px 1em;
+    }
+
+    #about-container div p:nth-child(2) {
+        font-size: 18px;
+    }
+
+    #about-container div p:last-child {
+        font-size: 14px;
+    }
+
+    #best-gift-title h2 {
+        font-size: 24px;
     }
 }
 
@@ -349,21 +390,35 @@ h2 {
         font-size: 24px;
     }
 
+    #about {
+        height: auto;
+    }
+
     #about-container {
         flex-direction: column;
-        height: 628px;
+        height: 880px;
     }
 
     #about-container div {
-        padding: 25px 10px 0 10px;
+        padding: 20px;
         width: 100%;
+        height: 45%;
+    }
+
+    #about-container div p:nth-child(2) {
+        font-size: 20px;
     }
 
     #about-img {
         width: 100% !important;
+        height: 55% !important;
     }
 
     .slider-text {
         font-size: 50px;
+    }
+
+    #best-gift-title h2 {
+        font-size: 22px;
     }
 }

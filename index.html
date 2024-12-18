@@ -25,7 +25,6 @@
             <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
-                <span></span>
             </button>
             <!-- menu -->
             <nav id="menu" class="flex-center">
@@ -52,11 +51,13 @@
                 </div>
             </section>
 
+            <a href="#menu" id="arrow-up">🡡</a>
+
             <!-- ABOUT SECTION -->
             <section id="about" class="flex-center flex-column">
                 <div id="about-container" class="flex-between">
                     <div class="flex-column">
-                        <p class="text-primary">About</p>
+                        <h2 class="text-primary text-normal">About</h2>
                         <p class="text-bold text-uppercase">Unleash your inner superhero!</p>
                         <p class="text-normal">This New Year marks the beginning of your journey to
                             inner harmony and new strengths. We offer unique gifts that will help you
@@ -87,7 +88,10 @@
                     </div>
                     <div id="slider-buttons" class="flex-row">
                         <button id="left-button" class="slider-button rounded" aria-label="Scroll Left"><img src="./assets/leftbtn.png" alt="left button"></button>
-                        <button id="right-button" class="slider-button rounded" aria-label="Scroll Right"><img src="./assets/rightbtn.png" alt="right button"></button>
+                        <button
+                            id="right-button"
+                            class="slider-button rounded"
+                            aria-label="Scroll Right"><img src="./assets/rightbtn.png" alt="right button"></button>
                     </div>
                 </div>
             </section>
@@ -223,8 +227,10 @@
                 const burgerMenu = document.getElementById('burger-menu');
                 const menu = document.getElementById('menu');
                 const menuLinks = menu.querySelectorAll('a');
+                const arrowUp = document.getElementById('arrow-up');
 
-                // toggle the active class on the menu and burger icon when burger menu is clicked
+                // toggle the active class on the menu and burger icon when burger menu is
+                // clicked
                 burgerMenu.addEventListener('click', () => {
                     menu
                         .classList
@@ -253,7 +259,15 @@
                             .remove('no-scroll');
                     });
                 });
-            });
+
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        arrowUp.classList.add('visible'); 
+                    } else {
+                        arrowUp.classList.remove('visible');
+                    }
+                });
+             });
         </script>
     </body>
 

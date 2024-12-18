@@ -116,6 +116,13 @@ h1 {
 
 /* MEDIA SCREENS */
 
+@media screen and (max-width: 500px) {
+    #tabs a {
+        padding: 12px 5px;
+        font-size: 11px;
+    }
+}
+
 @media screen and (max-width: 380px) {
     h1 {
         font-size: 22px;
