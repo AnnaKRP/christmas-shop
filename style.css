@@ -157,7 +157,8 @@ main {
     width: 60px;
     height: 60px;
     bottom: 10px; 
-    right: 10px; 
+    right: 10px;
+    transform: translateX(-50%);
     border-radius: 50%;
     border: 2px solid #FF4646;
     color: #FF4646;
@@ -369,8 +370,13 @@ footer {
     }
 
     #arrow-up.visible {
-        visibility: visible; /* Element becomes visible */
-        opacity: 1; /* Fully opaque */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #arrow-up {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #footer-container {

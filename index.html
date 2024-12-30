@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="./home.css">
         <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+        <script src="./server.js"></script>
     </head>
 
     <body>
@@ -51,7 +52,7 @@
                 </div>
             </section>
 
-            <a href="#menu" id="arrow-up">🡡</a>
+            <a href="#logo" id="arrow-up">🡡</a>
 
             <!-- ABOUT SECTION -->
             <section id="about" class="flex-center flex-column">
@@ -222,53 +223,6 @@
             </div>
         </footer>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const burgerMenu = document.getElementById('burger-menu');
-                const menu = document.getElementById('menu');
-                const menuLinks = menu.querySelectorAll('a');
-                const arrowUp = document.getElementById('arrow-up');
-
-                // toggle the active class on the menu and burger icon when burger menu is
-                // clicked
-                burgerMenu.addEventListener('click', () => {
-                    menu
-                        .classList
-                        .toggle('active');
-                    burgerMenu
-                        .classList
-                        .toggle('open');
-                    document
-                        .body
-                        .classList
-                        .toggle('no-scroll');
-                });
-
-                // remove active class when any menu link is clicked, closing the menu
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu
-                            .classList
-                            .remove('active');
-                        burgerMenu
-                            .classList
-                            .remove('open');
-                        document
-                            .body
-                            .classList
-                            .remove('no-scroll');
-                    });
-                });
-
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 300) {
-                        arrowUp.classList.add('visible'); 
-                    } else {
-                        arrowUp.classList.remove('visible');
-                    }
-                });
-             });
-        </script>
     </body>
 
 </html>
