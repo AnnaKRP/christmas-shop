@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    arrowUp.classList.remove('visible');
+    
     // show the "arrow-up" button when scrolling down to 300, and hide it when scrolling up
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -155,4 +157,68 @@ document.addEventListener('DOMContentLoaded', () => {
     // call the function
     updateTimer();
 
+    // fetch and display GIFTS from gifts.json file
+    fetch('./gifts.json')
+        .then(response => response.json())
+        .then(data => {
+            displayRandomGifts(data);
+        })
+        .catch(error => console.error("Error loading JSON data:", error));
 });
+
+// shuffle function
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// display 4 random gifts
+function displayRandomGifts(gifts) {
+    const cardContainer = document.getElementById('card-container');
+    
+    const shuffledGifts = shuffleArray(gifts).slice(0, 4);
+    
+    // Clear any existing cards
+    // cardContainer.innerHTML = '';
+
+    shuffledGifts.forEach(gift => {
+        const card = document.createElement('div');
+        card.classList.add('card', 'flex-column');
+        
+        // set the category color based on the category
+        let categoryColor = '';
+        let categoryImage = '';
+
+        switch (gift.category.toLowerCase()) {
+            case 'for work':
+                categoryColor = '#4361FF';
+                categoryImage = 'card-img-one';
+                break;
+            case 'for harmony':
+                categoryColor = '#FF43F7';
+                categoryImage = 'card-img-three';
+                break;
+            case 'for health':
+                categoryColor = '#06A44F';
+                categoryImage = 'card-img-two';
+                break;
+            default:
+                categoryColor = 'gray';
+        }
+
+        // add card content
+        card.innerHTML = `
+            <div class="card-img ${categoryImage}"></div>
+            <div class="card-name flex-column">
+                <h4 class="text-uppercase text-bold text-blue" style="color: ${categoryColor};">${gift.category}</h4>
+                <h3 class="text-uppercase text-secondary">${gift.name}</h3>
+            </div>
+        `;
+        
+        // add card to container
+        cardContainer.appendChild(card);
+    });
+}

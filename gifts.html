@@ -1,193 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>GiftLink</title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./gifts.css">
-        <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
-        <script src="./server.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GiftLink</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./gifts.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+</head>
 
-    <body>
+<body>
 
-        <!-- HEADER / MENU -->
-        <header class="flex-between">
-            <a href="./index.html">
-                <div id="logo-container" class="flex-center rounded">
-                    <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
-                    <p class="text-secondary text-bold text-uppercase">The Gifts</p>
+    <!-- HEADER / MENU -->
+    <header class="flex-between">
+        <a href="./index.html">
+            <div id="logo-container" class="flex-center rounded">
+                <img src="./assets/Logo.png" alt="logo, snowflake" id="logo">
+                <p class="text-secondary text-bold text-uppercase">The Gifts</p>
+            </div>
+        </a>
+        <!-- burger -->
+        <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+        </button>
+        <!-- menu -->
+        <nav id="menu" class="flex-center">
+            <a href="./gifts.html" class="text-bold text-uppercase">Gifts</a>
+            <a href="./index.html#about" class="text-bold text-uppercase">About</a>
+            <a href="./index.html#best-gift" class="text-bold text-uppercase">Best</a>
+            <a href="#contacts" class="text-bold text-uppercase">Contacts</a>
+        </nav>
+    </header>
+
+    <!-- MAIN GIFT SECTION -->
+    <main>
+        <section id="gift-section" class="flex-center flex-column">
+            <div id="gift-container" class="flex-column">
+                <h1 class="text-white text-uppercase text-center">Achieve health, harmony, and inner strength</h1>
+                <div id="tabs" class="flex-row">
+                    <a href="#" class="text-bold text-uppercase text-white">All</a>
+                    <a href="#" class="text-bold text-uppercase text-white">For work</a>
+                    <a href="#" class="text-bold text-uppercase text-white">For health</a>
+                    <a href="#" class="text-bold text-uppercase text-white">For harmony</a>
                 </div>
-            </a>
-            <!-- burger -->
-            <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-            </button>
-            <!-- menu -->
-            <nav id="menu" class="flex-center">
-                <a href="./gifts.html" class="text-bold text-uppercase">Gifts</a>
-                <a href="./index.html#about" class="text-bold text-uppercase">About</a>
-                <a href="./index.html#best-gift" class="text-bold text-uppercase">Best</a>
-                <a href="#contacts" class="text-bold text-uppercase">Contacts</a>
-            </nav>
-        </header>
 
-        <!-- MAIN HERO SECTION -->
-        <main>
-            <section id="gift-section" class="flex-center flex-column">
-                <div id="gift-container" class="flex-column">
-                    <h1 class="text-white text-uppercase text-center">Achieve health, harmony, and inner strength</h1>
-                    <div id="tabs" class="flex-row">
-                        <a href="#" class="text-bold text-uppercase text-white">All</a>
-                        <a href="#" class="text-bold text-uppercase text-white">For work</a>
-                        <a href="#" class="text-bold text-uppercase text-white">For health</a>
-                        <a href="#" class="text-bold text-uppercase text-white">For harmony</a>
+                <a href="#logo-container" id="arrow-up">🡡</a>
+
+                <!-- CARD CONTAINER -->
+                <div id="card-container">
+                    <div class="card flex-column">
+                        <div class="card-img card-img-one"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                            <h3 class="text-uppercase text-secondary">console.lo guru</h3>
+                        </div>
                     </div>
-
-                    <a href="#logo-container" id="arrow-up">🡡</a>
-
-                    <!-- CARD CONTAINER -->
-                    <div id="card-container">
-                        <div class="card flex-column">
-                            <div class="card-img card-img-one"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                                <h3 class="text-uppercase text-secondary">console.lo guru</h3>
-                            </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-two"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-green">For health</h4>
+                            <h3 class="text-uppercase text-secondary">Step master</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-two"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-green">For health</h4>
-                                <h3 class="text-uppercase text-secondary">Step master</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-one"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                            <h3 class="text-uppercase text-secondary">Bug magnet</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-one"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                                <h3 class="text-uppercase text-secondary">Bug magnet</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-one"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                            <h3 class="text-uppercase text-secondary">Shortcut cheater</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-one"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                                <h3 class="text-uppercase text-secondary">Shortcut cheater</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-two"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-green">For health</h4>
+                            <h3 class="text-uppercase text-secondary">Posture levitation</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-two"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-green">For health</h4>
-                                <h3 class="text-uppercase text-secondary">Posture levitation</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-four"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
+                            <h3 class="text-uppercase text-secondary">Bug acceptance guru</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-four"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                                <h3 class="text-uppercase text-secondary">Bug acceptance guru</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-two"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-green">For health</h4>
+                            <h3 class="text-uppercase text-secondary">Snack resister</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-two"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-green">For health</h4>
-                                <h3 class="text-uppercase text-secondary">Snack resister</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-four"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
+                            <h3 class="text-uppercase text-secondary">Error laugher</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-four"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                                <h3 class="text-uppercase text-secondary">Error laugher</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-two"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-green">For health</h4>
+                            <h3 class="text-uppercase text-secondary">Hydration bot</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-two"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-green">For health</h4>
-                                <h3 class="text-uppercase text-secondary">Hydration bot</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-one"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
+                            <h3 class="text-uppercase text-secondary">Merge master</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-one"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                                <h3 class="text-uppercase text-secondary">Merge master</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-four"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
+                            <h3 class="text-uppercase text-secondary">Joy charger</h3>
                         </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-four"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                                <h3 class="text-uppercase text-secondary">Joy charger</h3>
-                            </div>
-                        </div>
-                        <div class="card flex-column">
-                            <div class="card-img card-img-four"></div>
-                            <div class="card-name flex-column">
-                                <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                                <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
-                            </div>
+                    </div>
+                    <div class="card flex-column">
+                        <div class="card-img card-img-four"></div>
+                        <div class="card-name flex-column">
+                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
+                            <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <!-- FOOTER -->
-        <footer class="flex-column">
-            <div id="footer-container" class="flex-column">
-                <div id="contacts">
-                    <a href="tel:+375291112233">
-                        <div id="phone" class="flex-column">
-                            <img src="./assets/santa-clause.png" alt="santa claus">
-                            <h3>+375 (29) 111-22-33</h3>
-                            <p class="text-secondary text-uppercase text-bold">Call Us</p>
-                        </div>
-                    </a>
-                    <a href="https://maps.app.goo.gl/32WinKbwLyHUkpVs9">
-                        <div id="meet" class="flex-column">
-                            <img src="./assets/tree.png" alt="christmas tree">
-                            <h3 class="text-uppercase">Magic forest</h3>
-                            <p class="text-secondary text-uppercase text-bold">Meet Us</p>
-                        </div>
-                    </a>
-                    <a href="mailto:your-email@example.com">
-                        <div id="email" class="flex-column">
-                            <img src="./assets/snake.png" alt="snake">
-                            <h3 class="text-uppercase">gifts@magic.com</h3>
-                            <p class="text-secondary text-uppercase text-bold">Write Us</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="social-media" class="flex-row">
-                    <a href="https://rs.school/"><img
-                        src="./assets/telegram.png"
-                        alt="telegram icon"
-                        class="social-icon rounded"></a>
-                    <a href="https://rs.school/"><img
-                        src="./assets/facebook.png"
-                        alt="facebook icon"
-                        class="social-icon rounded"></a>
-                    <a href="https://rs.school/"><img
-                        src="./assets/instagram.png"
-                        alt="instagram icon"
-                        class="social-icon rounded"></a>
-                    <a href="https://rs.school/"><img src="./assets/X.png" alt="x icon" class="social-icon rounded"></a>
-                </div>
-                <p>© Copyright 2025, All Rights Reserved</p>
-                <a href="https://rs.school/" id="school-link">
-                    <p>Made in Rolling Scopes School</p>
+    <!-- FOOTER -->
+    <footer class="flex-column">
+        <div id="footer-container" class="flex-column">
+            <div id="contacts">
+                <a href="tel:+375291112233">
+                    <div id="phone" class="flex-column">
+                        <img src="./assets/santa-clause.png" alt="santa claus">
+                        <h3>+375 (29) 111-22-33</h3>
+                        <p class="text-secondary text-uppercase text-bold">Call Us</p>
+                    </div>
+                </a>
+                <a href="https://maps.app.goo.gl/32WinKbwLyHUkpVs9">
+                    <div id="meet" class="flex-column">
+                        <img src="./assets/tree.png" alt="christmas tree">
+                        <h3 class="text-uppercase">Magic forest</h3>
+                        <p class="text-secondary text-uppercase text-bold">Meet Us</p>
+                    </div>
+                </a>
+                <a href="mailto:your-email@example.com">
+                    <div id="email" class="flex-column">
+                        <img src="./assets/snake.png" alt="snake">
+                        <h3 class="text-uppercase">gifts@magic.com</h3>
+                        <p class="text-secondary text-uppercase text-bold">Write Us</p>
+                    </div>
                 </a>
             </div>
-        </footer>
-    </body>
+            <div id="social-media" class="flex-row">
+                <a href="https://rs.school/"><img src="./assets/telegram.png" alt="telegram icon"
+                        class="social-icon rounded"></a>
+                <a href="https://rs.school/"><img src="./assets/facebook.png" alt="facebook icon"
+                        class="social-icon rounded"></a>
+                <a href="https://rs.school/"><img src="./assets/instagram.png" alt="instagram icon"
+                        class="social-icon rounded"></a>
+                <a href="https://rs.school/"><img src="./assets/X.png" alt="x icon" class="social-icon rounded"></a>
+            </div>
+            <p>© Copyright 2025, All Rights Reserved</p>
+            <a href="https://rs.school/" id="school-link">
+                <p>Made in Rolling Scopes School</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./server.js"></script>
+
+</body>
 
 </html>

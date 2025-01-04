@@ -227,8 +227,7 @@ button {
     height: 70%;
 }
 
-.card-img-one,
-.card-img-three {
+.card-img-one{
     background: url(./assets/gift-for-work.png);
     background-size: cover;
     background-position: center;
@@ -240,7 +239,7 @@ button {
     background-position: center;
 }
 
-.card-img-four {
+.card-img-three {
     background: url(./assets/gift-for-harmony.png);
     background-size: cover;
     background-position: center;
