@@ -41,7 +41,7 @@
             <div id="gift-container" class="flex-column">
                 <h1 class="text-white text-uppercase text-center">Achieve health, harmony, and inner strength</h1>
                 <div id="tabs" class="flex-row">
-                    <a href="#" class="text-bold text-uppercase text-white">All</a>
+                    <a href="#" class="text-bold text-uppercase text-white active">All</a>
                     <a href="#" class="text-bold text-uppercase text-white">For work</a>
                     <a href="#" class="text-bold text-uppercase text-white">For health</a>
                     <a href="#" class="text-bold text-uppercase text-white">For harmony</a>
@@ -51,88 +51,21 @@
 
                 <!-- CARD CONTAINER -->
                 <div id="card-container">
-                    <div class="card flex-column">
-                        <div class="card-img card-img-one"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">console.lo guru</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-two"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-green">For health</h4>
-                            <h3 class="text-uppercase text-secondary">Step master</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-one"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">Bug magnet</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-one"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">Shortcut cheater</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-two"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-green">For health</h4>
-                            <h3 class="text-uppercase text-secondary">Posture levitation</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-four"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                            <h3 class="text-uppercase text-secondary">Bug acceptance guru</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-two"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-green">For health</h4>
-                            <h3 class="text-uppercase text-secondary">Snack resister</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-four"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                            <h3 class="text-uppercase text-secondary">Error laugher</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-two"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-green">For health</h4>
-                            <h3 class="text-uppercase text-secondary">Hydration bot</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-one"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-blue">For work</h4>
-                            <h3 class="text-uppercase text-secondary">Merge master</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-four"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                            <h3 class="text-uppercase text-secondary">Joy charger</h3>
-                        </div>
-                    </div>
-                    <div class="card flex-column">
-                        <div class="card-img card-img-four"></div>
-                        <div class="card-name flex-column">
-                            <h4 class="text-uppercase text-bold text-pink">For harmony</h4>
-                            <h3 class="text-uppercase text-secondary">Spontaneous Coding Philosopher</h3>
+                    <!-- cards will be dynamically inserted here -->
+                </div>
+
+                <!-- MODAL -->
+                <div id="modal-overlay" class="modal-overlay"></div>
+                <div id="gift-modal" class="gift-modal rounded">
+                    <div class="gift-modal-content flex-column">
+                        <button id="close-modal" class="close-modal-btn">X</button>
+                        <div id="modal-image-container" class="modal-image-container"></div>
+                        <div class="gift-modal-body flex-column">
+                            <h4 id="modal-category" class="text-uppercase text-normal"></h4>
+                            <h3 id="modal-gift-name" class="text-uppercase text-bold text-secondary"></h3>
+                            <p id="modal-description" class="text-secondary"></p>
+                            <p class="text-secondary text-uppercase text-bold">Adds superpowers to:</p>
+                            <ul id="modal-superpowers" class="text-secondary"></ul>
                         </div>
                     </div>
                 </div>
@@ -182,7 +115,7 @@
         </div>
     </footer>
 
-    <script src="./server.js"></script>
+    <script src="./gifts.js"></script>
 
 </body>
 

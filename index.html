@@ -51,8 +51,6 @@
                 </div>
             </section>
 
-            <a href="#logo-container" id="arrow-up">🡡</a>
-
             <!-- ABOUT SECTION -->
             <section id="about" class="flex-center flex-column">
                 <div id="about-container" class="flex-between">
@@ -103,8 +101,25 @@
                         <p class="text-center">Best Gifts</p>
                         <h2 class="text-uppercase text-center text-bold">Especially for you</h2>
                     </div>
+
                     <div id="card-container">
                         <!-- cards will be dynamically inserted here -->
+                    </div>
+
+                    <!-- MODAL -->
+                    <div id="modal-overlay" class="modal-overlay"></div>
+                    <div id="gift-modal" class="gift-modal rounded">
+                        <div class="gift-modal-content flex-column">
+                            <button id="close-modal" class="close-modal-btn">X</button>
+                            <div id="modal-image-container" class="modal-image-container"></div>
+                            <div class="gift-modal-body flex-column">
+                                <h4 id="modal-category" class="text-uppercase text-normal"></h4>
+                                <h3 id="modal-gift-name" class="text-uppercase text-bold text-secondary"></h3>
+                                <p id="modal-description" class="text-secondary"></p>
+                                <p class="text-secondary text-uppercase text-bold">Adds superpowers to:</p>
+                                <ul id="modal-superpowers" class="text-secondary"></ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -141,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-            </section>            
+            </section>
         </main>
 
         <!-- FOOTER -->
@@ -193,7 +208,7 @@
         </footer>
 
         <script src="./server.js"></script>
-        
+
     </body>
 
 </html>
