@@ -184,16 +184,20 @@ button {
 
 .slider-button {
     background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 26px;
     width: 56px;
     height: 56px;
-    border: 1px solid #FFFFFF;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.slider-button img {
-    width: 18px;
-    height: 18px;
+.slider-button:disabled {
+    background-color: transparent;
+    border: 1px solid #ffffff3a;
+    color: #ffffff3a;
+    cursor: not-allowed;
 }
 
 .slider-button:hover {

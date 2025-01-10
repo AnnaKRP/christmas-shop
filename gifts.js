@@ -13,22 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDescription = document.getElementById('modal-description');
     const modalSuperpowers = document.getElementById('modal-superpowers');
 
-    // toggle the active class on the menu and burger icon when the burger menu is clicked
-    burgerMenu.addEventListener('click', () => {
-        console.log('Burger menu clicked');
-        menu.classList.toggle('active');
-        burgerMenu.classList.toggle('open');
-        document.body.classList.toggle('no-scroll');
-    });
-
-    // remove active class when any menu link is clicked & closing the menu
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-            burgerMenu.classList.remove('open');
-            document.body.classList.remove('no-scroll');
+    // BURGER MENU
+    if (burgerMenu && menu) {
+        burgerMenu.addEventListener('click', () => {
+            console.log('Burger menu clicked');
+            menu.classList.toggle('active');
+            burgerMenu.classList.toggle('open');
+            document.documentElement.classList.toggle('no-scroll');
         });
-    });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                burgerMenu.classList.remove('open');
+                document.documentElement.classList.toggle('no-scroll');
+            });
+        });
+    }
 
     // ARROW UP
     arrowUp.classList.remove('visible');
@@ -135,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         modal.style.display = 'none';
         modalOverlay.style.display = 'none';
-        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     }
 
     function openModal(gift) {
@@ -203,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // make the modal and overlay visible
         modal.style.display = 'block';
         modalOverlay.style.display = 'block';
-        document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
     }
 
     modalOverlay.addEventListener('click', closeModal);

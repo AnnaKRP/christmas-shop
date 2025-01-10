@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Burger menu clicked');
             menu.classList.toggle('active');
             burgerMenu.classList.toggle('open');
-            document.body.classList.toggle('no-scroll');
+            document.documentElement.classList.toggle('no-scroll');
         });
 
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('active');
                 burgerMenu.classList.remove('open');
-                document.body.classList.remove('no-scroll');
+                document.documentElement.classList.toggle('no-scroll');
             });
         });
     }
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let sliderPosition = 0;
 
-    // get the screen width and set the number of clicks needed
+    // get the number of clicks needed based on the screen width
     function getSliderClicks() {
         const screenWidth = window.innerWidth;
 
@@ -67,18 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderPosition -= movement;
         }
 
-        // set the new position of the slider
+        // ensure the slider doesn't exceed its boundaries
+        const maxPosition = 940 - 400;
+        sliderPosition = Math.max(0, Math.min(sliderPosition, maxPosition));
+
         rowSlider.style.transform = `translateX(-${sliderPosition}px)`;
 
-        // disable the left button if at the extreme left position
+        // disable buttons if at the extreme position
         leftButton.disabled = sliderPosition <= 0;
-
-        // disable the right button if at the extreme right position
-        const maxPosition = (940 - 400);
         rightButton.disabled = sliderPosition >= maxPosition;
     }
 
-    // add event listeners to the buttons
+    // event listeners for the buttons
     if (rightButton && leftButton) {
         rightButton.addEventListener('click', () => {
             moveSlider('right');
@@ -88,9 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
             moveSlider('left');
         });
 
-        // set buttons to the starting position
-        moveSlider('right');
+        moveSlider('left');
     }
+
+    // recalculate on window resize to ensure proper behavior
+    window.addEventListener('resize', () => {
+        sliderPosition = Math.min(sliderPosition, calculateMovement() * getSliderClicks());
+        moveSlider('left');
+    });
 
     // TIMER
     function updateTimer() {
@@ -195,13 +200,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         modal.style.display = 'none';
         modalOverlay.style.display = 'none';
-        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     }
 
     function openModal(gift) {
-        console.log("Gift Object:", gift);
-        console.log("Superpowers:", gift.superpowers);
-
         // update modal with gift details
         modalGiftName.textContent = gift.name;
         modalCategory.textContent = gift.category;
@@ -244,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // clear previous superpowers and populate them
         modalSuperpowers.innerHTML = '';
-        console.log("Before adding superpowers:", modalSuperpowers.innerHTML);
 
         if (gift.superpowers && typeof gift.superpowers === 'object') {
             Object.entries(gift.superpowers).forEach(([key, value]) => {
@@ -258,12 +259,10 @@ document.addEventListener('DOMContentLoaded', () => {
             modalSuperpowers.appendChild(li);
         }
 
-        console.log("After adding superpowers:", modalSuperpowers.innerHTML);
-
         // make the modal and overlay visible
         modal.style.display = 'block';
         modalOverlay.style.display = 'block';
-        document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
     }
 
     modalOverlay.addEventListener('click', closeModal);
